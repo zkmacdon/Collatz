@@ -4,8 +4,8 @@ Collatz Conjecture Modeller: V1
 Primary goal for this iteration is to use the following rules, via recursion, to arrive at 1:
     - If the n is odd, then compute 3n + 1
     - If the n is even, compute n/2
-
-Other goals achieved as a result of this version was to
+Following that, I used the newly generated objects to generate some insights about the phenomena 
+surrounding the conjecture, and to visualize some of my findings graphically.
 """
 import matplotlib.pyplot as plt
 
@@ -22,14 +22,14 @@ def plot_points_fixed(x_data: List[int], y_data: List[int]) -> None:
     p.show()
 
 
-def consecutive_cycles(x_data: List[int], y_data: List[int]) -> None:
+def consecutive_cycles(x_data: List[int], y_data: List[int]) -> None: # the runtime efficiency of this function needs to be improved.
     consecutive_list = []
     for j in range(len(x_data)):
         if j < len(x_data) - 1 and (y_data[j] == y_data[j + 1] or y_data[j] == y_data[j - 1]):
             consecutive_list.append((x_data[j], y_data[j]))
 
     consecutive_groups = []
-    for k in consecutive_list:
+    for k in consecutive_list: # reduce the number of for loops.
         if consecutive_groups:
             for l in range(len(consecutive_groups)):
                 if consecutive_groups[l][0][1] == k[1] and k not in consecutive_groups[l]\
