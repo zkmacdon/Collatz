@@ -1,6 +1,8 @@
 class Collatz:
     """
-
+    This class is designed for creating objects that possess a collatz conjecture value relevant
+    to the inputted value. The collatz conjecture value is deifned by the number of cycles required
+    when using the rules of the collatz conjecture for a number to arrive at 1.
     """
     number: int
     _cycles: float
@@ -12,7 +14,7 @@ class Collatz:
     def make_tuple(self) -> tuple:
         return self.number, self._cycles
 
-    def _dummy_collatz(self, num: float) -> None:
+    def _dummy_collatz(self, num: float) -> None: # clean up this method.
         self._cycles += 1
         if num == 1.0:
             pass
