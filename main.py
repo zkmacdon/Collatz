@@ -69,7 +69,7 @@ def consecutive_cycles(x_data: List[int], y_data: List[int]) -> None: # the runt
     fig.suptitle('A plot of consecutive collatz numbers and the distance from one '
                  'group to another')
     ax1.plot(x_list_2, y_list_2)
-    ax2.plot(x_list_1, y_list_1, )
+    ax2.plot(x_list_1, y_list_1)
     p.show()
 
 
