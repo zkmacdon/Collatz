@@ -1,7 +1,7 @@
 class Collatz:
     """
     This class is designed for creating objects that possess a collatz conjecture value relevant
-    to the inputted value. The collatz conjecture value is deifned by the number of cycles required
+    to the inputted value. The collatz conjecture value is defined by the number of cycles required
     when using the rules of the collatz conjecture for a number to arrive at 1.
     """
     number: int
